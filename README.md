@@ -18,7 +18,7 @@ Compatibility with other Nginx-derived projects (OpenResty, etc.) and 3rd party 
 
 If you already have production sites running on Nginx, don't do anything stupid. You should only take essential pieces from here and evaluate your own config on staging environment.
 
-If you are starting with a clean Nginx installation with any custom config, you can directly replace your nginx config sketelon with this one:
+If you are starting with a clean Nginx installation without any custom config, you can directly replace your nginx config sketelon with this one:
 
 ```shell
 # run as root
