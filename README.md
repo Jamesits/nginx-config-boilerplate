@@ -1,8 +1,10 @@
 # oh-my-nginx
 
-**Config Nginx in 2018 like Caddy server!**
+**Nginx config for modern, secure sites in 2018.**
 
-This project aims to be a modular Nginx config template to ease common tasks like proxying websites, offloading SSL, redirecting URLs, etc.
+> 凭谁问：廉颇老矣，尚能饭否？——辛弃疾
+
+This project aims to be a modular Nginx config template to ease common tasks like proxying websites, (semi-automatically) offloading SSL, redirecting URLs, etc.
 
 ## Compatibility
 
@@ -41,8 +43,15 @@ There are various `.example` files in these two directory; you can use them as a
 
 We implemented a semi-automatic LE signing method with no service disruption during signing process. To use this you need [autocert](https://github.com/Jamesits/autocert).
 
-It works now but the documentation is on its way. Check back later.
+Detailed documentation is on its way. Check back later.
 
 ## Notes
 
-This config template is derived from [James Swineson](https://swineson.me)'s production server. They are based on the official config template of Nginx 1.12.
+This config template is originated from [James Swineson](https://swineson.me)'s production server (One of my load balancers running Ubuntu 16.04). They are based on the official config template of Nginx 1.12.
+
+Some fossil versions of Nginx uses a different directory structure:
+
+ * `/etc/nginx/sites-available/*.conf` to store all sites configuration;
+ * `/etc/nginx/sites-enabled/*.conf` are symlinks from `sites-available` and they are actually included in the main config.
+
+We do not use this structure anymore, and `conf.d/` works exactly the same like `sites-enabled/` (though without the symlinks). If you want to temporary disable a config just append a `.disabled` on its name (other suffixes are fine as long as the last part of the file name is not `.conf`).
