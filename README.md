@@ -1,6 +1,6 @@
 # oh-my-nginx
 
-**Config Nginx in 2018 like Caddy server**
+**Config Nginx in 2018 like Caddy server!**
 
 This project aims to be a modular Nginx config template to ease common tasks like proxying websites, offloading SSL, redirecting URLs, etc.
 
@@ -12,12 +12,14 @@ We assume you are using the mainline version of Nginx. Some new exciting feature
 
 ## Installation
 
-Replace your nginx config sketelon with this one:
+If you already have production sites running on Nginx, don't do anything stupid. You should only take essential pieces from here and evaluate your own config on staging environment.
+
+If you are starting with a clean Nginx installation with any custom config, you can directly replace your nginx config sketelon with this one:
 
 ```shell
 # run as root
 rm -r /etc/nginx
-git clone https://github.com/Jamesits/oh-my-nginx.git nginx
+git clone https://github.com/Jamesits/oh-my-nginx.git /etc/nginx
 ```
 
 ## Usage

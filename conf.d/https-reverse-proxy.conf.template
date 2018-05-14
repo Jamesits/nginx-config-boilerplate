@@ -1,0 +1,27 @@
+# Proxy https://example.com to https://backend-serer:8443. Optional support
+# for self-signed ssl on backend server.
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name example.com;
+
+    ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+
+    location / {
+        proxy_pass https://backend-server:8443;
+
+        ## if backend server's certificate is self-signed and you are careless:
+        # proxy_ssl_verify off;
+        ## Otherwise copy backend server public key to this server and:
+        # proxy_ssl_trusted_certificate /path/to/backend.server.crt;
+        
+        include conf.d/templates/proxy-default.conf;
+        include conf.d/templates/transparent-proxy.conf;
+    }
+
+    include conf.d/templates/ssl.conf;
+    include conf.d/templates/performance.conf;
+    include conf.d/templates/security.conf;
+}

@@ -1,3 +1,14 @@
+# Proxy https://example.com to a HTTP-only backend server. This is the basic
+# form of reverse proxy.
+#
+# Make sure this server and the backend server are communicating using secure
+# private network; otherwise the proxy connection may be hijacked. (This once
+# happened in Google and caused problem. I've warned you.)
+#
+# If this server is taking large amount of requests, hardware crypto
+# acceleration (certain CPU instruction set or even dedicated hardware) is
+# recommended.
+
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;

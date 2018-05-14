@@ -1,3 +1,6 @@
+# Example to add custom HTTP header when proxying sites.
+# Other parts are identical to https-reverse-proxy.conf.template.
+
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;

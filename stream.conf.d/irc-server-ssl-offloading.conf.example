@@ -1,8 +1,8 @@
-# IRC server reverse proxy example
-# Nginx does SSL offloading
+# IRC server reverse proxy example, Nginx does SSL offloading
+# Make sure connection from this server to upstream server is secure!
 
 upstream irc-upstream {
-	server backend-server:6697;
+	server backend-server:6667;
 }
 
 server {
