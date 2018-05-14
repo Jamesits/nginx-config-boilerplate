@@ -1,10 +1,10 @@
 # oh-my-nginx
 
-**Nginx config for modern, secure sites in 2018.**
+**Modular Nginx config for modern, secure sites in 2018.**
 
 > 凭谁问：廉颇老矣，尚能饭否？——辛弃疾
 
-This project aims to be a modular Nginx config template to ease common tasks like proxying websites, (semi-automatically) offloading SSL, redirecting URLs, etc.
+This project aims to be a modular Nginx config template to ease common tasks like proxying websites, redirecting URLs, (semi-automatically) signing Let's Encrypt, offloading SSL, etc.
 
 ## Compatibility
 
