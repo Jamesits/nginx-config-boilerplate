@@ -4,7 +4,7 @@ server {
     server_name example.com;
 
     ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 
     location / {
         proxy_pass http://backend-server:8080;
