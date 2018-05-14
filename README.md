@@ -6,9 +6,11 @@ This project aims to be a modular Nginx config template to ease common tasks lik
 
 ## Compatibility
 
-We assume you are using the mainline version of Nginx. Some new exciting features (http2, stream, etc.) are not supported on old versions (stable and/or distro packages).
+We assume you are using the mainline version of Nginx with at least the official sets of modules. Some new exciting features (http2, stream, etc.) are not supported on old versions (stable and/or distro packages). 
 
 [Here](https://nginx.org/en/linux_packages.html) is instruction for installing latest version of nginx. 
+
+Compatibility with other Nginx-derived projects (OpenResty, etc.) and 3rd party modules are not verifyed. If you have interest in verifying with/supporting them, contributions are welcomed.
 
 ## Installation
 
