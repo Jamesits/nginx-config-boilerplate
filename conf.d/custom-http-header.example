@@ -1,0 +1,23 @@
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name example.com;
+
+    ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+
+    location / {
+        proxy_pass http://backend-server:8080;
+        include conf.d/templates/proxy-admin.conf;
+        include conf.d/templates/transparent-proxy.conf;
+
+        # custom headers
+        # in this example we are proxying a piwik instance
+        # that needed to be used on other domain
+        add_header Access-Control-Allow-Origin *;
+    }
+
+    include conf.d/templates/ssl.conf;
+    include conf.d/templates/performance.conf;
+    include conf.d/templates/security.conf;
+}

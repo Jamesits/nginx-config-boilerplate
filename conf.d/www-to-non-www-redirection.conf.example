@@ -1,0 +1,16 @@
+# redirect www.example.com to example.com
+
+server {
+	listen 443 ssl http2;
+	listen [::]:443 ssl http2;
+	server_name www.example.com;
+
+	ssl_certificate     /etc/letsencrypt/live/www.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.example.com/privkey.pem;
+
+	return 301 $scheme://example.com$request_uri;
+
+	include conf.d/templates/ssl.conf;
+	include conf.d/templates/performance.conf;
+	include conf.d/templates/security.conf;
+}

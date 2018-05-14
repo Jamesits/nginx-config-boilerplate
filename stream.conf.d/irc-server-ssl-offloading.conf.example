@@ -1,0 +1,19 @@
+# IRC server reverse proxy example
+# Nginx does SSL offloading
+
+upstream irc-upstream {
+	server backend-server:6697;
+}
+
+server {
+	listen 6697 ssl;
+	listen [::]:6697 ssl;
+
+	ssl_certificate	/etc/letsencrypt/live/example.com/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+
+	proxy_pass irc-upstream;
+
+	include stream.conf.d/templates/proxy-default.conf;
+	include stream.conf.d/templates/ssl.conf;
+}
