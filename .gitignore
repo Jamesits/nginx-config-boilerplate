@@ -1,0 +1,2 @@
+conf.d/*.conf
+stream.conf.d/*.conf
