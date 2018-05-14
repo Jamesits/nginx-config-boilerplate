@@ -33,7 +33,7 @@ git clone https://github.com/Jamesits/oh-my-nginx.git /etc/nginx
  * `conf.d/*.conf` is where your HTTP/HTTPS config lives
  * `stream.conf.d/*.conf` is for TCP proxy
 
-There are various `.example` files in these two directory; you can use them as a start point and modify it to suit your needs. Basically you need to change these values:
+There are various `examples/*.conf` files in these two directory; you can use them as a start point (copy it to `conf.d/` or `stream.conf.d/` and rename them) and modify it to suit your needs. Basically you need to change these values:
 
  * `server_name` to your domain (set up DNS to point to your server IP!)
  * `proxy_pass` to your backend or what you want to proxy from
