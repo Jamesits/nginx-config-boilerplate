@@ -24,6 +24,7 @@ If you are starting with a clean Nginx installation without any custom config, y
 # run as root
 rm -r /etc/nginx
 git clone https://github.com/Jamesits/oh-my-nginx.git /etc/nginx
+openssl dhparam -out /etc/ssl/dhparam.pem 4096
 ```
 
 ## Usage
