@@ -8,7 +8,7 @@ This project aims to be a modular Nginx config template to ease common tasks lik
 
 ## Compatibility
 
-We assume you are using the mainline version of Nginx with at least the official sets of modules. Some new exciting features (http2, stream, etc.) are not supported on old versions (stable and/or distro packages). 
+We assume you are always using the newest mainline version of Nginx with at least the official sets of modules. Some new exciting features (http2, stream, etc.) are not supported on old versions (stable and/or distro packages). 
 
 [Here](https://nginx.org/en/linux_packages.html) is instruction for installing latest version of nginx. 
 
@@ -48,7 +48,9 @@ Detailed documentation is on its way. Check back later.
 
 ## Notes
 
-This config template is originated from [James Swineson](https://swineson.me)'s production server (One of my load balancers running Ubuntu 16.04). They are based on the official config template of Nginx 1.12.
+If you think this is helpful, please consider [buy me a coffee](https://www.buymeacoffee.com/Jamesits).
+
+This config template is originated from a production server (One of my load balancers running Ubuntu 16.04). They are based on the official config template of Nginx 1.12.
 
 Some fossil versions of Nginx uses a different directory structure:
 
