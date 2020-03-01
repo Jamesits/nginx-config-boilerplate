@@ -25,7 +25,7 @@ If you are starting with a clean Nginx installation without any custom config, y
 rm -r /etc/nginx
 git clone https://github.com/Jamesits/oh-my-nginx.git /etc/nginx
 cd /etc/nginx
-./kickstart.sh
+./helper_scripts/kickstart.sh
 ```
 
 ## Usage

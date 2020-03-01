@@ -11,3 +11,9 @@ openssl req -new -x509 -subj "/CN=DO_NOT_TRUST.example.com\/emailAddress=noreply
 
 # generate a default dhparam
 openssl dhparam -out /etc/ssl/dhparam.pem 4096
+
+# test config
+nginx -t
+
+set +x
+echo "Kickstart finished, now reload your nginx config!"
