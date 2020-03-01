@@ -41,11 +41,27 @@ There are various `examples/*.conf` files in these two directory; you can use th
  * `proxy_pass` to your backend or what you want to proxy from
  * `ssl_certificate` and `ssl_certificate_key` to your SSL key file (If you use [certbot](https://certbot.eff.org/) then you may only need to edit `example.com` part)
 
-## Semi-automatic Let's Encrypt signing
+### Updating
 
-We implemented a semi-automatic LE signing method with no service disruption during signing process. To use this you need [autocert](https://github.com/Jamesits/autocert).
+Sometimes this config skeleton might change, for example, when old TLS configuration is deprecated. To update:
 
-Detailed documentation is on its way. Check back later.
+```shell
+# run as root
+cd /etc/nginx
+./helper_scripts/update.sh
+```
+
+### Semi-automatic Let's Encrypt signing
+
+We implemented a semi-automatic LE signing method with no service disruption during signing process. This require `certbot` be installed and auto renew timer is configured correctly on your system.
+
+To get a TLS cert:
+
+```shell
+# run as root
+cd /etc/nginx
+./helper_scripts/letsencrypt.sh your.domain.example.com
+```
 
 ## Notes
 

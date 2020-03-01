@@ -1,7 +1,7 @@
 #!/bin/bash
 set -Eeuxo pipefail
 
-cd "$( dirname "${BASH_SOURCE[0]}" )"/conf.d
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 # generate a default cert -- assuming new openssl versions
 # new ECC curves are deliberately chosen to minimize compatibility
