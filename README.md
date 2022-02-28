@@ -23,7 +23,7 @@ If you are starting with a clean Nginx installation without any custom config, y
 ```shell
 # run as root
 rm -r /etc/nginx
-git clone https://github.com/Jamesits/oh-my-nginx.git /etc/nginx
+git clone https://github.com/Jamesits/nginx-config-boilerplate.git /etc/nginx
 cd /etc/nginx
 ./helper_scripts/kickstart.sh
 ```
