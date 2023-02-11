@@ -1,6 +1,6 @@
-# oh-my-nginx
+# Nginx Config Boilerplate
 
-**Modular Nginx config for modern, secure sites in 2018.**
+**Modular Nginx config for modern, secure sites in ~2018 2019 2020 2021 2022~ 2023.**
 
 > 凭谁问：廉颇老矣，尚能饭否？——辛弃疾
 
