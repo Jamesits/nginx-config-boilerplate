@@ -10,7 +10,8 @@ openssl ecparam -name brainpoolP512t1 -genkey -param_enc explicit -out conf.d/de
 openssl req -new -x509 -subj "/CN=DO_NOT_TRUST.example.com\/emailAddress=noreply@example.com/C=AA/ST=Nonexistent/L=Nonexistent/O=Nonexistent/OU=Nonexistent" -days 114514 -key conf.d/default.key -out conf.d/default.crt
 
 # generate a default dhparam
-openssl dhparam -out /etc/ssl/dhparam.pem 4096
+# openssl dhparam -out /etc/ssl/dhparam.pem 4096
+curl https://ssl-config.mozilla.org/ffdhe2048.txt > /etc/ssl/dhparam.pem
 
 # test config
 nginx -t
