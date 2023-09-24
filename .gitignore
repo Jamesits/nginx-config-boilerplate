@@ -3,6 +3,7 @@
 
 # user customization
 conf.d/*.conf
+!conf.d/default.conf
 conf.d/*.crt
 conf.d/*.key
 conf.d/*.pem
