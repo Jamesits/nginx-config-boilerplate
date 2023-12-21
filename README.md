@@ -26,6 +26,15 @@ rm -r /etc/nginx
 git clone https://github.com/Jamesits/nginx-config-boilerplate.git /etc/nginx
 cd /etc/nginx
 ./helper_scripts/kickstart.sh
+
+mkdir -p /etc/systemd/system/nginx.service.d
+cat > /etc/systemd/system/nginx.service.d/override.conf <<EOF
+[Service]
+LimitNOFILE=1048576
+EOF
+systemctl stop nginx
+systemctl daemon-reload
+systemctl enable --now nginx
 ```
 
 ## Usage
